@@ -5,11 +5,11 @@ import { Menu, X } from "lucide-react";
 import SmoothScrollLink from "./SmoothScrollLink";
 
 const NAV_LINKS = [
-  { href: "#services",   label: "Services" },
-  { href: "#expertise",  label: "Expertise" },
-  { href: "#why",        label: "Why Us" },
+  { href: "#services", label: "Services" },
+  { href: "#expertise", label: "Expertise" },
+  { href: "#why", label: "Why Us" },
   { href: "#technology", label: "Our Approach" },
-  { href: "#contact",    label: "Contact Us" },
+  { href: "#contact", label: "Contact Us" },
 ];
 
 export default function MobileNav() {
@@ -17,7 +17,9 @@ export default function MobileNav() {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [open]);
 
   const close = () => setOpen(false);
@@ -37,7 +39,9 @@ export default function MobileNav() {
       <div
         onClick={close}
         className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden transition-opacity duration-300 ${
-          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          open
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
       />
 
@@ -66,17 +70,14 @@ export default function MobileNav() {
         </div>
 
         {/* Breadcrumb */}
-        <div className="px-5 pt-4 pb-3 shrink-0">
-          <p className="text-[10px] font-semibold uppercase tracking-widest text-teal-500 mb-1.5">
-            Navigation
-          </p>
-          <div className="flex items-center gap-1.5 text-xs text-gray-400">
+        {/* < <div className="px-5 pt-4 pb-3 shrink-0">
+       <div className="flex items-center gap-1.5 text-xs text-gray-400">
             <span className="text-teal-700 font-semibold">Home</span>
             <span>›</span>
             <span>Sections</span>
-          </div>
-          <div className="mt-3 h-px bg-gray-100" />
-        </div>
+          </div> 
+          <div className="mt-3 h-px bg-gray-100" /> 
+        </div> */}
 
         {/* Links */}
         <nav className="flex-1 px-3 py-1 overflow-y-auto">
@@ -93,11 +94,11 @@ export default function MobileNav() {
                     : "text-gray-700 hover:bg-teal-50 hover:text-teal-700"
                 }`}
               >
-                {!isContact && (
+                {/* {!isContact && (
                   <span className="w-6 h-6 shrink-0 rounded-full bg-teal-50 border border-teal-200 text-teal-600 text-[10px] font-bold flex items-center justify-center group-hover:bg-teal-600 group-hover:text-white group-hover:border-teal-600 transition-all">
                     {i + 1}
                   </span>
-                )}
+                )} */}
                 {label}
               </SmoothScrollLink>
             );

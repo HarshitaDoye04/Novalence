@@ -261,10 +261,10 @@ export default function Home() {
             src="/pharma-vials.jpg"
             alt="Pharmaceutical lab"
             fill
-            className="object-cover opacity-55"
+            className="object-cover opacity-70 object-center"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-teal-950/70 via-teal-900/55 to-teal-800/45" />
+          <div className="absolute inset-0 bg-gradient-to-br from-teal-950/50 via-teal-900/40 to-teal-800/30" />
         </div>
 
         {/* decorative blobs */}
@@ -414,7 +414,7 @@ export default function Home() {
                   {[
                     "CTD Modules",
                     "ACTD Format",
-                    "DMF Dossiers",
+                    "DMF documentation & compilation support",
                     "Submission Readiness",
                     "Compliance Verification",
                     "Lifecycle Documentation",
